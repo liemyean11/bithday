@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top, #fff0f5, #ffe6f0);
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  color: #d81b60;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 40px;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to   { transform: scale(1.05); }
+}
+
+.cake {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  margin: 60px auto;
+}
+
+/* Atas kue dengan topping coklat */
+.top-circle {
+  width: 400px;
+  height: 130px;
+  background: radial-gradient(circle at center, #4e342e, #3e2723);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  box-shadow: inset 0 4px #5d4037;
+}
+
+/* Sisi kue */
+.side-cylinder {
+  width: 400px;
+  height: 120px;
+  background: linear-gradient(to bottom, #ffb6c1, #ff6384);
+  position: absolute;
+  top: 70px;
+  border-radius: 0 0 200px 200px / 0 0 60px 60px;
+  z-index: 1;
+  box-shadow: inset 0 -5px #d81b60;
+}
+
+/* Lilin */
+.candle {
+  position: absolute;
+  top: 30px;
+  width: 10px;
+  height: 50px;
+  background: white;
+  border-radius: 3px;
+  z-index: 3;
+}
+
+.candle .flame {
+  width: 12px;
+  height: 18px;
+  background: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: -18px;
+  left: -1px;
+  animation: flicker 0.3s infinite alternate;
+}
+
+@keyframes flicker {
+  0%   { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.3); opacity: 0.7; }
+}
+
+/* Sprinkle */
+.sprinkle {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.sprinkle:nth-child(odd) { background-color: yellow; }
+.sprinkle:nth-child(even) { background-color: cyan; }
+
+/* Tombol */
+button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #c2185b;
+}
+
+/* Doa & Harapan */
+.wish {
+  margin: 40px auto;
+  max-width: 500px;
+  padding: 20px;
+  background: #ffe6f0;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.wish p {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #880e4f;
+}
